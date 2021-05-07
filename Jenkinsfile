@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run tests'){
             steps{
-                sh 'java -jar **/utms-cli.jar --config /var/lib/jenkins/workspace/UTMS/utms-sandbox/testing.yaml'
+                sh 'java -jar **/utms-cli.jar --config /var/lib/jenkins/workspace/UTMS/utms-sandbox/.git/testing.yaml'
             }
         }
     }
