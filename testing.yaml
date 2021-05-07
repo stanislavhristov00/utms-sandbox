@@ -4,17 +4,17 @@ project:
 suites:
  - BackEndTests:
  - Test1:
-   enabled: true
-   command: echo Test
+    enabled: true
+    command: echo Test
  - Test2:
-   enabled: true
-   command: echo Test 2
-   description: This test does something too
+    enabled: true
+    command: echo Test 2
+    description: This test does something too
  - UITests:
  - Test3:
-   enabled: true
-   command: echo Test 3
-   description: Hello world
+    enabled: true
+    command: echo Test 3
+     description: Hello world
  - Test4:
-   enabled: false
-   command: echo Test 4
+    enabled: false
+    command: echo Test 4
