@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git credentialsId: 'git_credentials', url: 'https://gitlab-talentboost.vmware.com/stanislavhristov00/utms-sandbox.git'
+                ws('repo'){
+                    git credentialsId: 'git_credentials', url: 'https://gitlab-talentboost.vmware.com/stanislavhristov00/utms-sandbox.git'
+                }
             }
         }
 
@@ -16,7 +18,7 @@ pipeline {
 
         stage('Run tests'){
             steps{
-                sh 'java -jar **/utms-cli.jar --config /var/lib/jenkins/workspace/UTMS/utms-sandbox/.git/testing.yaml'
+                sh 'java -jar **/utms-cli.jar --config repo/testing.yaml'
             }
         }
     }
