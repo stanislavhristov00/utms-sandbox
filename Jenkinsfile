@@ -18,7 +18,7 @@ pipeline {
 
         stage('Run tests'){
             steps{
-                sh 'java -jar **/utms-cli.jar --config repo/testing.yaml'
+                sh 'java -jar **/utms-cli.jar --config %WORKSPACE%/../testing.yaml'
             }
         }
     }
