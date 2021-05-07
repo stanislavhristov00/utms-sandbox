@@ -13,5 +13,11 @@ pipeline {
                 copyArtifacts(projectName: 'utms-cli');
             }
         }
+
+        stage('Run tests'){
+            steps{
+                sh 'java -jar utms-cli'
+            }
+        }
     }
 }
