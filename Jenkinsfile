@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run tests'){
             steps{
-                sh 'java -jar utms-cli'
+                sh 'java -jar utms-cli.jar'
             }
         }
     }
