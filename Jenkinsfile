@@ -18,7 +18,7 @@ pipeline {
 
         stage('Run tests'){
             steps{
-                sh 'java -jar **/utms-cli.jar --config /var/lib/jenkins/workspace/UTMS/utms-sandbox/testing.yaml --server http://localhost:8081/api -d'
+                sh 'java -jar **/utms-cli.jar --config /var/lib/jenkins/workspace/UTMS/utms-sandbox/testing.yaml --server http://localhost:8081/api'
             }
         }
     }
